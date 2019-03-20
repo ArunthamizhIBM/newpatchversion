@@ -1,0 +1,60 @@
+
+
+For i = 1 To 1 Step 1
+r = i + 1
+'	read_testdata(r)
+'print "i : " & i
+
+' The variable "num_of_test_steps" is the number of test steps present in the KEYWORD sheet.
+Dim num_of_test_steps
+
+num_of_test_steps = 4
+
+For step_no = 1 To num_of_test_steps Step 1
+'For step_no = 7 To 7 Step 1
+r = 2 + step_no
+
+print "step_no : " & step_no
+
+read_fw_stmt(r)
+
+'If step_no = 4 Then
+'	td = userid
+'ElseIf step_no = 5 Then
+'	td = pword
+'End If
+
+print " kw = " & kw
+
+Select Case kw
+
+	Case "webelement_click"
+		webelement_click()
+	
+	Case "link_click"
+		link_click()	
+	
+	Case "btn_click"
+		btn_click()
+	
+	Case "enter_text"
+		enter_text()
+			
+	Case "launch_app"
+		launch_app()	
+	
+	Case "click"	
+		click()
+		
+	Case "close_app"
+		close_app()		
+		
+	Case "verify"
+		
+		verify_text()	
+		
+End Select
+
+Next
+
+Next
